@@ -1,8 +1,10 @@
-$yellowLight: #FFF1B5;
-$orangeMed: #D8BA43;
-$blueMed: #4682A8;
-$greyMed: #CBD1D3;
-$brownDark: #3F3613;
+$yellow-700: #FFF1B5;
+$orange-400: #EF8354;
+$blue-100: #2D3142;
+$blue-400: #4F5D75;
+$grey-400: #BFC0C0;
+$grey-900: #FFFFFF;
+$brown-100: #3F3613;
 $border-radius-small: 0.3em;
 $paddingMed: 0.25em;
 $paddingBig: 3em;
@@ -21,7 +23,7 @@ html, body {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    background-color: $yellowLight;
+    background-color: $grey-400;
 }
 view-box box-title.sa-title{
     font-weight: 600;

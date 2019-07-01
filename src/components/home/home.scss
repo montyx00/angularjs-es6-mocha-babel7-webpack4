@@ -1,7 +1,7 @@
 @import '../../app.scss';
 
 ui-view > div.wrapper {
-    background-color: $greyMed;
+    background-color: $grey-900;
     padding: 0;
     display: block;
     height: 100%;
@@ -22,15 +22,16 @@ header, footer, div.wrapper {
 header.sa-header {
     font-weight: 600;
     height: 3em;
-    background-color: $orangeMed;
+    background-color: $blue-400;
     padding: 0.5em;
+    color: $grey-900;
 }
 header.sa-header > logotext {
     font-size: 1.5em;
-    background-color: $blueMed;
+    background-color: $orange-400;
     border-radius: $border-radius-small;
     padding: 0.25em;
-    color: #fff;
+    color: $grey-900;
 }
 section.sa-inputform input-wrapper, section.sa-datatable input-wrapper {
     display: flex;
@@ -48,7 +49,7 @@ section.sa-inputform input-wrapper, section.sa-datatable input-wrapper {
 pusher,
 footer {
     min-height: 10em;
-    background-color: $brownDark;
+    background-color: $blue-100;
 }
 
 
