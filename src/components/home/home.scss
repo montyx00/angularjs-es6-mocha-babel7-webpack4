@@ -1,0 +1,54 @@
+@import '../../app.scss';
+
+ui-view > div.wrapper {
+    background-color: $greyMed;
+    padding: 0;
+    display: block;
+    height: 100%;
+    margin-bottom: -10em;
+}
+main.sa-main {
+    padding: 0.5em;
+    margin: 0;
+}
+main, section {    
+    display: block;
+    margin: 0;
+}
+header, footer, div.wrapper {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+} 
+header.sa-header {
+    font-weight: 600;
+    height: 3em;
+    background-color: $orangeMed;
+    padding: 0.5em;
+}
+header.sa-header > logotext {
+    font-size: 1.5em;
+    background-color: $blueMed;
+    border-radius: $border-radius-small;
+    padding: 0.25em;
+    color: #fff;
+}
+section.sa-inputform input-wrapper, section.sa-datatable input-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.sa-datatable {
+
+}
+
+.sa-title {
+
+}
+
+pusher,
+footer {
+    min-height: 10em;
+    background-color: $brownDark;
+}
+
+

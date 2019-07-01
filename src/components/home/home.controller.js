@@ -1,4 +1,4 @@
-class HomeController {
+export class HomeController {
     
     constructor(HttpService) {
         this.http = HttpService
@@ -16,4 +16,4 @@ class HomeController {
     }
 }
 HomeController.$inject = ['HttpService']
-export default HomeController
+export const HOME_CONTROLLER_NAME = 'HomeController'

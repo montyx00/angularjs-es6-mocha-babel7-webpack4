@@ -1,0 +1,32 @@
+<view-box class="sa-form">
+    <box-title class="sa-title">FORM</box-title>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius.</p>
+    <ng-form name="inputForm">
+        <input-wrapper>
+            <div>
+                <label for="symbol">Stock symbol </label><br />
+                <label for="media">Social media </label><br />
+                <label for="window">Time window</label><br />
+            </div>
+            <div>
+                <select name="symbol">
+                    <option ng-repeat="symbol in ::form.symbols" value="symbol.id" ng-model="form.symbol">{{::symbol.symbol}} - {{::symbol.name}}</option>
+                </select><br />
+                <select name="media">
+                    <option ng-repeat="media in ::form.medias" value="media.id" ng-model="form.media">{{::media.name}}</option>
+                </select><br />
+                <input name="window" type="number" placeholder="Default number of days is 10" ng-model="form.window" /><br />
+            </div>
+        </input-wrapper>
+        <button-wrapper>
+            <button type="submit" ng-click="form.submit()">Submit</button>
+            <button type="reset" ng-click="form.reset()">Reset</button>
+        </button-wrapper>
+    </ng-form>
+    <result-wrapper ng-if="true">
+        <box-title class="sa-title">RESULT</box-title>
+        <div>
+            <label for="resultmediacount">Social media posts count </label><span>{{form.postCount}}</span><br />
+        </div>
+    </result-wrap>
+</view-box>
