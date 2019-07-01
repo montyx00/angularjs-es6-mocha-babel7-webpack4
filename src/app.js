@@ -1,19 +1,25 @@
-import 'angular/angular.js'
-import 'font-awesome/css/font-awesome.css'
-import angularUIRouter from '@uirouter/angularjs'
+import angular from 'angular'
+import uirouter from '@uirouter/angularjs'
 
-import home from "./home/home.module"
-import routing from './app.config'
+import homeModule from "./components/home/home.module"
+import formModule from './components/form/form.module'
+import router from './config/app.config'
+import routes from './routes/app.routes'
+import { HTTP_SERVICE_NAME, HttpService } from './services/http.service'
 
 let stockAppModule = angular.module('stockApp', [
-    angularUIRouter,
-    home
+    uirouter,
+    homeModule,
+    formModule
 ])
+
+stockAppModule
+    .service(HTTP_SERVICE_NAME, HttpService)
+    .config(router)
+    .config(routes)
 
 stockAppModule.run(() => {
     console.log('App started')
 })
-
-stockAppModule.config(routing)
 
 export default stockAppModule;

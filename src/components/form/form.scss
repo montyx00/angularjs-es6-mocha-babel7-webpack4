@@ -1,0 +1,24 @@
+@import '../../app.scss';
+
+section.sa-inputform input-wrapper select, section.sa-inputform input-wrapper input {
+    min-width: 15em;
+    min-height: 1.8em;
+}
+section.sa-inputform input-wrapper label {
+    line-height: 1.5em;
+}
+section.sa-inputform input-wrapper div:first-child {
+    min-width: 7em;
+}
+section.sa-inputform input-wrapper input {
+    padding-left: $paddingMed
+}
+section.sa-inputform button-wrapper {
+    display: block;
+    padding-left: 7em;
+    margin-top: $paddingMed
+}
+section.sa-inputform result-wrapper {
+    display: block;
+    padding: $paddingBig 0 $paddingBig 0;
+}
