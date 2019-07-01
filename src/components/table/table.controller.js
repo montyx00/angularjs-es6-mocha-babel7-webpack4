@@ -1,19 +1,19 @@
+import {ALGORITHM_SERVICE_NAME} from '../../services/algorithm.service'
+
 export class TableController {
     
-    constructor(HttpService) {
-        this.http = HttpService
-        this.getCount()
+    constructor(AlgorithmService) {
+        this.algorithm = AlgorithmService
+        this.registerCallback()
     }
 
-    getCount() {
-        this.http.get('social/getcount', 'symbol="LOGM"&media="facebook')
-        .then((response) => {
-            this.count = response.data.count
-        })
-        .catch((error) => {
-            console.log("Get count error: ", error.message)
-        })
+    callback(data) {
+        this.tableData = data
+        console.log(this.tableData)
+    }
+    registerCallback() {
+        this.algorithm.registerCallback(this.callback)
     }
 }
-TableController.$inject = ['HttpService']
+TableController.$inject = [ALGORITHM_SERVICE_NAME]
 export const TABLE_CONTROLLER_NAME = 'TableController'

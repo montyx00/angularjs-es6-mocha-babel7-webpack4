@@ -1,7 +1,10 @@
+import {HTTP_SERVICE_NAME} from '../../services/http.service'
+import {ALGORITHM_SERVICE_NAME} from '../../services/algorithm.service'
 export class FormController {
     
-    constructor(HttpService) {
+    constructor(HttpService, AlgorithmService) {
         this.http = HttpService
+        this.algorithm = AlgorithmService
         this.getSymbols()
         this.getMedias()
         this.window = 10
@@ -26,8 +29,10 @@ export class FormController {
         })
     }
     submit() {
-        this.http.get('social/getcount', 'symbol="' + this.symbol + '"&media="' + this.media)
-        .then((response) => {
+        this.algorithm.getRangeData(this.media.id, this.days, 'algorithm01')
+
+        this.http.get('social/getcount', 'symbol="' + this.symbol.id + '"&media="' + this.media.id)
+        .then(response => {
             this.postCount = response.data.count
         })
         .catch((error) => {
@@ -35,5 +40,5 @@ export class FormController {
         })
     }
 }
-FormController.$inject = ['HttpService']
+FormController.$inject = [HTTP_SERVICE_NAME, ALGORITHM_SERVICE_NAME]
 export const FORM_CONTROLLER_NAME = 'FormController'

@@ -1,4 +1,3 @@
-import $http from 'angular'
 import config from '../config/http.config'
 
 export const HTTP_SERVICE_NAME = 'HttpService'

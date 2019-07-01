@@ -9,13 +9,9 @@
                 <label for="window">Time window</label><br />
             </div>
             <div>
-                <select name="symbol">
-                    <option ng-repeat="symbol in ::form.symbols" value="symbol.id" ng-model="form.symbol">{{::symbol.symbol}} - {{::symbol.name}}</option>
-                </select><br />
-                <select name="media">
-                    <option ng-repeat="media in ::form.medias" value="media.id" ng-model="form.media">{{::media.name}}</option>
-                </select><br />
-                <input name="window" type="number" placeholder="Default number of days is 10" ng-model="form.window" /><br />
+                <select name="symbol" ng-model="form.symbol" ng-options="symbol.symbol for symbol in ::form.symbols track by symbol.symbol"></select><br />
+                <select name="media" ng-model="form.media" ng-options="media.name for media in ::form.medias track by media.id"></select><br />
+                <input name="window" type="number" placeholder="Default number of days is 10" ng-model="form.days" /><br />
             </div>
         </input-wrapper>
         <button-wrapper>
