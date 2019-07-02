@@ -1,4 +1,14 @@
-<view-box class="sa-table">
-    <box-title class="sa-title">TABLE</box-title>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus est exemplis hoc facere longius.</p>
-</view-box>
+<dtable>
+    <dtheader>
+        <hrow><hcell>Posts</hcell><hcell>Price</hcell><hcell>Date</hcell><hcell>Recommendation</hcell></hrow>
+    </dtheader>
+    <dtbody>
+        <brow ng-repeat="data in $ctrl.tableData">
+            <bcell>{{::data.count}}</bcell>
+            <bcell>{{::data.price}}</bcell>
+            <bcell>{{::data.date}}</bcell>
+            <bcell>{{::data.recommendation}}</bcell>
+        </brow>
+    </dtbody>
+    <dtfooter></dtfooter>
+</dtable>

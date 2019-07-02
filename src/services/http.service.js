@@ -6,8 +6,11 @@ export class HttpService {
         this.$http = $http
     }
 
-    get(url, query) {
-        return this.$http.get(config.baseUrl + url + '?' + query)
+    get(url, query, isCache) {
+        query = query ? '?' + query : ''
+        return this.$http.get(config.baseUrl + url + query, {
+            cache: isCache ? true : false
+        })
     }
 }
 

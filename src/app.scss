@@ -4,6 +4,7 @@ $blue-100: #2D3142;
 $blue-400: #4F5D75;
 $grey-400: #BFC0C0;
 $grey-900: #FFFFFF;
+$grey-100: #000;
 $brown-100: #3F3613;
 $border-radius-small: 0.3em;
 $paddingMed: 0.25em;
@@ -24,7 +25,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     background-color: $grey-400;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+body > ui-view {
+    flex: 1;
+}
+
 view-box box-title.sa-title{
     font-weight: 600;
     font-size: 1.2em;

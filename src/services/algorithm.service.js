@@ -9,21 +9,7 @@ export class AlgorithmService {
     }
 
     getRangeData(media, days, algorithmId) {
-        this.http.get('algorithm/getrangedata', 'media=' + media + '&days=' + days + '&algorithm=' + algorithmId)
-        .then((response) => {
-            this.rangeData = response.data
-            for(let i = 0; i < this.callbacks.length; ++i) {
-                this.callbacks[i](this.rangeData)
-            }
-        })
-        .catch((error) => {
-            // TODO: replace exception
-            console.log("Get count error: ", error.message)
-        })
-    }
-
-    registerCallback(callback) {
-        this.callbacks.push(callback)
+        return this.http.get('algorithm/getrangedata', 'media=' + media + '&days=' + days + '&algorithm=' + algorithmId, true)
     }
 }
 

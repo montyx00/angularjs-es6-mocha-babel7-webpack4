@@ -22,3 +22,22 @@ section.sa-inputform result-wrapper {
     display: block;
     padding: $paddingBig 0 $paddingBig 0;
 }
+
+section.sa-inputform social-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section.sa-inputform social-wrapper social {
+    display: block;
+    border: solid 1px $grey-100;
+    padding: $paddingMed;
+    margin: $paddingMed;
+    width: 48%;
+}
+
+section.sa-inputform social-wrapper social author {
+    display: block;
+    font-weight: 600;
+}

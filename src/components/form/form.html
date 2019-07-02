@@ -19,10 +19,38 @@
             <button type="reset" ng-click="form.reset()">Reset</button>
         </button-wrapper>
     </ng-form>
-    <result-wrapper ng-if="true">
+    <result-wrapper ng-if="form.postCount">
         <box-title class="sa-title">RESULT</box-title>
         <div>
             <label for="resultmediacount">Social media posts count </label><span>{{form.postCount}}</span><br />
         </div>
-    </result-wrap>
+    </result-wrapper>
+    <box-title class="sa-title">Top Posts</box-title>
+    <input-wrapper>
+        <div>
+            <label for="qty">Post qty</label><br />
+        </div>
+        <div>
+            <input name="qty" type="number" placeholder="Default number of posts" ng-model="form.postQty" /><br />
+        </div>
+        <div><button ng-click="form.getTopPosts(form.postQty)">OK</button></div>
+    </input-wrapper>
+    <social-wrapper ng-if="form.topPosts">
+        <social ng-repeat="article in form.topPosts">
+            <author>{{::article.author}}</author>
+            <post>{{::article.content}}</post>
+        </social>
+    </social-wrapper>
+</view-box>
+<view-box class="sa-table" ng-if="form.rangeData.length">
+    <box-title class="sa-title">TABLE</box-title>
+    <input-wrapper>
+        <div>
+            <label for="algorithm">Change alg.</label><br />
+        </div>
+        <div>
+            <select name="algorithm" ng-model="form.selectedAlgo" ng-options="algorithm.name for algorithm in ::form.algorithms track by algorithm.id" ng-change="form.changeAlgorithm(form.selectedAlgo)"></select>
+        </div>
+    </input-wrapper>
+    <table-component table-data="form.rangeData"></table-component>
 </view-box>

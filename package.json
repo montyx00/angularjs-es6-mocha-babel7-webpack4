@@ -18,7 +18,8 @@
     "angular": "^1.7.8",
     "angular-animate": "^1.7.8",
     "angular-aria": "^1.7.8",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

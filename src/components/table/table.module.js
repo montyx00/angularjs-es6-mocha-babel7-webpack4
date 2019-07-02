@@ -1,8 +1,8 @@
 import angular from 'angular';
-import {TABLE_CONTROLLER_NAME, TableController} from './table.controller'
+import {TABLE_COMPONENT_NAME, tableComponent} from './table.component'
 import './table.scss'
 
 let tableModule = angular.module('stockApp.table', [])
-tableModule.controller(TABLE_CONTROLLER_NAME, TableController)
+tableModule.component(TABLE_COMPONENT_NAME, tableComponent)
 
 export default tableModule = tableModule.name

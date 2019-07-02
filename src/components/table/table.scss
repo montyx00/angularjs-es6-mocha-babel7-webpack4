@@ -1,3 +1,20 @@
-.welcome {
+table-component dtable {
+    display: flex;
+    flex-direction: column;
+}
+dtable dtheader, dtable dtbody, dtable dtfooter {
+    min-width: 40em;
+}
+
+dtable dtheader hrow, dtable dtbody brow {
+    display: flex;
+    flex-direction: row;
+}
+
+dtable dtheader hrow hcell {
     font-weight: 600;
+}
+
+dtable dtheader hrow hcell, dtable dtbody brow bcell {
+    min-width: 10em;
 }

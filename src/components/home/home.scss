@@ -5,7 +5,6 @@ ui-view > div.wrapper {
     padding: 0;
     display: block;
     height: 100%;
-    margin-bottom: -10em;
 }
 main.sa-main {
     padding: 0.5em;
@@ -46,7 +45,6 @@ section.sa-inputform input-wrapper, section.sa-datatable input-wrapper {
 
 }
 
-pusher,
 footer {
     min-height: 10em;
     background-color: $blue-100;
