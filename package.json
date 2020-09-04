@@ -43,7 +43,7 @@
     "mocha-es6": "^0.5.6",
     "ng-annotate-loader": "0.6.1",
     "node-libs-browser": "^2.2.1",
-    "node-sass": "4.12.0",
+    "node-sass": "4.14.1",
     "null-loader": "^3.0.0",
     "nyc": "^14.1.1",
     "postcss-import": "^12.0.1",
